@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Lifestyle-stores</title>
+    <link rel="shortcut icon" sizes="152x152" href="https://i1.lmsin.net/website_images/in/favicons/lifestyle/apple-touch-icon-152x152.png">
+    
+</head>
+<style>
+    body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    width: 5.5vw;
+    height: 50px;
+    padding: 16px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/Sprite_icons.svg) -95px -176px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.icon-text-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line {
+    border-left: 1px solid gray;
+    height: 60%;
+    margin: 0%;
+}
+
+.vertical-line-white {
+    border-left: 1px solid black;
+    height: 60%;
+    margin: 0%;
+}
+
+.icon {
+    width: 30px;
+    height: 25px;
+    /* background-color: white; */
+}
+
+#TOPBAR {
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(202, 192, 192);
+    width: 100%;
+    margin: auto;
+}
+
+#TOPBAR * {
+    /* color: white; */
+    margin: 0.1em;
+    vertical-align: middle;
+}
+
+#TOPBAR div:nth-child(1) {
+    display: flex;
+    width: 50%;
+    gap: 10%;
+}
+
+#TOPBAR div:nth-child(2) {
+    display: flex;
+    width: 25%;
+    gap: 10%;
+    justify-content: space-evenly;
+}
+
+.search-bar {
+    border: none;
+    background-color: #ECEDEB;
+    width: 20vw;
+    height: 3.5em;
+    border-radius: 2%;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#TOPBAR a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    background-color: #F7F8F7;
+    margin: auto;
+    width: 90vw;
+    height: 100%;
+    padding: 0.5em;
+    display: flex;
+    /* gap: 4%; */
+    justify-content: space-evenly;
+}
+
+
+
+nav h1 {
+    margin: 0.1em;
+   
+    font-size: 1.7em;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+nav h4, #TOPBAR h5 {
+  
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+#categories {
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    gap: 1%;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#add{
+    background-color: orange;
+    color: white;
+    width: 80%;
+    height: 30px;
+    padding: 0.3%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+#carousel {
+    margin: auto;
+    width: 80%;
+    padding: 2.5%;
+}
+
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.addStrips {
+    margin: auto;
+    width: 80%;
+    padding: 3.6%;
+}
+
+.addStrips img {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 0.1em solid rgb(236, 237, 235);
+  
+    width: 80%;
+    border-radius: 3%;
+}
+
+.squareAdds {
+    margin: auto;
+    padding: 3%;
+    width: 90%;
+    height: auto;
+}
+
+.squareAddsImages {
+    display: flex;
+    gap: 1%;
+}
+
+.squareAddsImages img {
+    cursor: pointer;
+}
+
+.smallSquareAdds {
+    margin: auto;
+    padding: 3%;
+    width: 90%;
+    height: auto;
+}
+
+.smallSquareAdds h1 {
+    font-size: 2.4em;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.smallSquareAddsImages {
+    display: grid;
+    grid-template-columns:repeat(6,1fr);
+    gap: 1%;
+}
+
+.smallSquareAddsImages img {
+    width: 100%;
+    height: auto;
+}
+
+.squareAdds h1 {
+    font-size: 2.4em;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.squareAdds img {
+    width: 33%;
+    height: auto;
+}
+
+.circleAdds {
+    margin: auto;
+    width: 90%;
+    padding: 3%;
+    height: auto;
+}
+
+.circleAdds h1 {
+    font-size: 2.4em;
+    /* font-weight: 500; */
+    letter-spacing: 3px;
+}
+
+.circleAddsImages {
+    display: grid;
+    gap: 1.5%;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto auto;
+}
+
+.circleAddsImages img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.circleAddsImages h4 {
+    text-align: center;
+    font-size: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.subscribeAndDownload {
+    margin: auto;
+    width: 80%;
+    padding: 3%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-around;
+}
+
+.subscribe {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.download {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.subscribeAndDownload h4 {
+    color: #757575;
+    font-weight: 400;
+}
+
+.subscribeAndDownload input {
+    width: 40%;
+    height: 4em;
+    border: 0px;
+    background-color: #F7F8F7;
+    border-radius: 3%;
+}
+
+input[type='text']::placeholder {
+    margin-left: 1%;
+    text-align: center;
+}
+
+.subscribeAndDownload button {
+    width: 25%;
+    height: 4em;
+    border: 0px;
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    background-color: black;
+    border-radius: 3%;
+}
+
+.subscribeAndDownload img {
+    width: 45%;
+    height: auto;
+}
+
+footer {
+    margin: auto;
+    width: 80%;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+footer h5 {
+    color: #5D5E5C;
+    font-weight: 400;
+    margin-top: 00.5em;
+    margin-bottom: 00.5em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+.copyright {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4%;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: black;
+}
+</style>
+
+<body >
+
+    <div id="TOPBAR">
+        <div>
+            <a href="">
+                <span class="icon-text-middle">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/617/617423.png" alt="">
+                    <h5>Free Shipping</h5>
+                </span>
+            </a>
+            <a href="">
+                <span class="icon-text-middle">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/1611/1611323.png" alt="">
+                    <h5>Click & Collect</h5>
+                </span>
+            </a>
+            <a href="">
+                <span class="icon-text-middle">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/726/726570.png" alt="">
+                    <h5>Return To Store</h5>
+                </span>
+            </a>
+        </div>
+        <div class="icon-text-middle">
+            <a href="">
+                <span class="icon-text-middle">
+                    <h6>Download Our Apps</h6>
+                </span>
+            </a>
+            <!-- <div class="vertical-line"></div> -->
+            <a href="">
+                <span class="icon-text-middle">
+                    <h6>Store Locator</h6>
+                </span>
+            </a>
+            <!-- <div class="vertical-line"></div> -->
+            <a href="">
+                <span class="icon-text-middle">
+                    <h6>Help</h6>
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+    <div>
+        <div style="background-color: #F7F8F7;">
+            <nav id="navbar" class="icon-text-middle sticky">
+                <a href="./index.html" style="width: 10%;">
+                    <span class="icon-text-middle">
+                        <span class="logo"></span>
+                    </span>
+                </a>
+                <a href="" id="women" style="width: 8%;">
+                    <span class="icon-text-middle">
+                        <h4>Women</h4>
+                    </span>
+                </a>
+                <a href="" id="men" style="width: 8%;">
+                    <span class="icon-text-middle">
+                        <h4>Men</h4>
+                    </span>
+                </a>
+                <a href="" id="kids" style="width: 8%;">
+                    <span class="icon-text-middle">
+                        <h4>Kids</h4>
+                    </span>
+                </a>
+                <a href="" id="shoesAndBags" style="width: 8%;">
+                    <span class="icon-text-middle">
+                        <h4>Shoes & Bags</h4>
+                    </span>
+                </a>
+
+                <span class="icon-text-middle" style="width: 30%;">
+                    <input class="search-bar" type="text" placeholder="What are you looking for?">
+                </span>
+
+                <a href="" id="signUpSignin" style="width: 15%;">
+                    <span class="icon-text-middle">
+                        <h4>Sign Up/Sign In</h4>
+                    </span>
+                </a>
+                <a id="basket" style="width: 8%;">
+                    <span class="icon-text-middle">
+                        <h4>Basket</h4>
+                        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/37/37464.png" alt="">
+                    </span>
+                </a>
+            </nav>
+        </div>
+        <div>
+            <div id="categories"></div>
+        </div>
+    </div>
+
+
+    <div style="background-color: orange;">
+        <div id="add">DEAL OF THE DAY: FLAT 50% OFF+ EXTRA 10% OFF. USE CODE SALE10></div>
+    </div>
+
+
+    <div id="carousel"></div>
+
+
+
+
+
+    <div class="addStrips">
+<img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/HP_LS_Women_Desktop-4-21July2022.jpg" alt="">
+
+<br>
+<hr>
+<hr>
+<hr>
+<hr>
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-9modblock-StripBanner2-D-19July2022.gif"
+            alt="" srcset="">
+    </div>
+    <hr>
+    <div class="addStrips">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-10modblock-oneBythree-A-Women-22July2022.gif"
+            alt="" srcset="">
+    </div>
+    <hr>
+    <div class="addStrips">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-12modblock-oneBythree-A-StripBanner1-18July2022.jpg"
+            alt="" srcset="">
+    </div>
+    <hr>
+    
+    <div class="addStrips">
+<img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modularblock-oneBytwo1A-Women-22June2022.jpg" alt="">
+</div>
+<hr>
+
+ 
+
+    <div class="circleAdds">
+        <h1>Shop By Category</h1>
+        <div class="circleAddsImages">
+            <div>
+                <img id="circleImgTopsAndTees"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-1-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Tops & Tees</h4>
+            </div>
+            <div>
+                <img id="circleImgEthnicwear"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-2-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Kurtas</h4>
+            </div>
+            <div>
+                <img id="circleImgBottoms"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-5-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Bottomwear</h4>
+            </div>
+            <div>
+                <img id="circleImgHandbags"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-9-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Handbags</h4>
+            </div>
+            <div>
+                <img id="circleImgFootwear"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-10-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Footwear</h4>
+            </div>
+            <div>
+                <img id="circleImgDresses"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-3-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Dresses</h4>
+            </div>
+            <div>
+                <img id="circleImgPlusSize"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-7-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Plus Size</h4>
+            </div>
+            <div>
+                <img id="circleImgWatches"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-8-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Watches</h4>
+            </div>
+            <div>
+                <img id="circleImgEthnicWear"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-4-Desktop-Women-01Sept20211.jpg"
+                    alt="">
+                <h4>Ethnic Sets</h4>
+            </div>
+            <div>
+                <img id="circleImgLingerie"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-6-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Lingerie</h4>
+            </div>
+            <div>
+                <img id="circleImgBeauty"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-11-Desktop-Women-01Sept2021.jpg"
+                    alt="">
+                <h4>Beauty</h4>
+            </div>
+            <div>
+                <img id="circleImgSkinCare"
+                    src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-12-Desktop-Women-22Sept2021.jpg"
+                    alt="">
+                <h4>Skin Care</h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="smallSquareAdds">
+        <h1>Top Trending Brands</h1>
+        <div class="smallSquareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-1-Women-Desktop-24Aug2021.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-2-Women-Desktop-24Aug2021.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-3-Women-Desktop-24Aug2021.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-4-Women-Desktop-20Sep2021.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-5-Women-Desktop-20Sep2021.gif"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-6-Women-Desktop-24Aug2021.jpg"
+                alt="">
+        </div>
+        <!-- <div class="smallSquareAddsImages">
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+        </div> -->
+    </div>
+    <hr>
+
+    <div class="squareAdds">
+        <h1>Wardrobe Essentials</h1>
+        <div class="squareAddsImages">
+            <img  src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-A-Women-24June2022.jpg"
+                alt="" srcset="">
+            <img  src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-B-Women-24June2022.jpg"
+                alt="">
+            <img  src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-15modularblock-oneBythree-C-Women-24June2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+  
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Top Picks</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-D-24June2022.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-E-24June2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-F-24June2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Trending Ethnic Wear</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-A-Women-24June2022.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-B-Women-24June2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-C-Women-24June2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Essential Range</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-A-Women-24June2022.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-B-Women-24June2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-C-Women-24June2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Wardrobe -Must Haves</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-A-24June2022.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-B-24June2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-C-24June2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Flash Sale For Today</h1>
+        <div class="squareAddsImages">
+            <img style="width:100%"
+                src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock1-A-08July2022.jpg"
+                alt="" srcset="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Editor's Curated List</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-A-Women-08April2022.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-B-Women-08April2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-C-Women-08April2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+
+
+    <div class="squareAdds">
+        <h1>Best Sellers</h1>
+        <div class="squareAddsImages">
+            <img style="width: 50%"
+                src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-C-Women-20May2022.jpg"
+                alt="" srcset="">
+            <img style="width: 50%"
+                src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-D-Women-07March2022.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="squareAdds">
+        <h1>Shop By Department</h1>
+        <div class="squareAddsImages">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-A-Women-04March2022A.jpg"
+                alt="" srcset="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-B-Women-12April2022.jpg"
+                alt="">
+            <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-C-Women-04March2022A.jpg"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+
+
+    <div class="subscribeAndDownload">
+        <div class="subscribe">
+            <h1>Subscribe to our awesome emails.</h1>
+            <h4>Get our latest offers and news straight in your inbox.</h4>
+            <input type="text" placeholder="Please enter an email address"><button>Subscribe</button>
+        </div>
+        <div class="download">
+            <h1>Download our apps</h1>
+            <h4>Shop our products and offers on-the-go.</h4>
+            <img src="https://www.nicepng.com/png/full/235-2356693_-appstore-apple-app-store-download-png.png" alt="">
+            <img src="https://en.logodownload.org/wp-content/uploads/2019/06/get-it-on-google-play-badge-1024x304.png"
+                alt="">
+        </div>
+    </div>
+    <hr>
+
+<!-- footer  start here -->
+    <footer>
+        <div>
+            <h2>Women</h2>
+            <h5>Tops</h5>
+            <h5>Ethnicwear</h5>
+            <h5>Bottoms</h5>
+            <h5>Dresses & Jumpsuits</h5>
+            <h5>Winterwear</h5>
+            <h5>Lingerie</h5>
+            <h5>Nightwear</h5>
+            <h5>Sportswear</h5>
+            <h5>Beauty</h5>
+            <h5>Watches & Sunglasses</h5>
+        </div>
+        <div>
+            <h2>Men</h2>
+            <h5>Tops</h5>
+            <h5>Bottoms</h5>
+            <h5>Ethnicwear</h5>
+            <h5>Winterwear</h5>
+            <h5>Sportswear</h5>
+            <h5>Innerwear</h5>
+            <h5>Grooming</h5>
+            <h5>Sportswear</h5>
+            <h5>Watches</h5>
+            <h5>Sunglasses</h5>
+        </div>
+        <div>
+            <h2>Kids</h2>
+            <h5>Girls Clothing</h5>
+            <h5>Boys Clothing</h5>
+            <h5>Infants Girls</h5>
+            <h5>Infants Boys</h5>
+            <h5>Winterwear</h5>
+            <h5>Add ons</h5>
+            <h5>The Teen Shop</h5>
+        </div>
+        <div>
+            <h2>Shoes & Bags</h2>
+            <h5>Women</h5>
+            <h5>Men</h5>
+            <h5>Boys</h5>
+            <h5>Girls</h5>
+            <h5>Women Accessories</h5>
+            <h5>Men Accessories</h5>
+            <h5>Essential</h5>
+        </div>
+        <div>
+            <h2>Explore</h2>
+            <h5>Online Offers</h5>
+            <h5>Store Offers</h5>
+            <h5>Online Gift Card</h5>
+            <h5>Store Gift Card</h5>
+            <h5>Stores Nearby</h5>
+            <h5>EDGE Membership</h5>
+            <h5>Refer & Win</h5>
+            <h5>Shop on WhatsApp</h5>
+            <h5>Fashion VLOG</h5>
+            <h5>Join CIRCLEMAG</h5>
+            <h5>SBI Offers</h5>
+            <h5>Homecentre</h5>
+        </div>
+        <div>
+            <h2>About</h2>
+            <h5>About us</h5>
+            <h5>Careers</h5>
+            <h5>Take a Tour</h5>
+            <h5>Blog</h5>
+            <h5>Store Locator</h5>
+            <h5>Landmark Cares</h5>
+        </div>
+        <div>
+            <h2>Help</h2>
+            <h5>Contact us</h5>
+            <h5>Shipping</h5>
+            <h5>Returns Process</h5>
+            <h5>Returns Policy</h5>
+            <h5>Help Centre</h5>
+        </div>
+    </footer>
+    <!-- footer end here -->
+    <hr>
+
+    <div class="copyright icon-text-middle">
+        <div>
+            <a href="index.html" style="width: 10%;">
+                <span class="icon-text-middle">
+                    <h1><span>lifestyle</span></h1>
+                </span>
+            </a>
+        </div>
+        <div style="color: #5D5E5C;">
+            &#169;2021 RNA Intellectual Property <br>
+            Terms & Conditions - Privacy Policy
+        </div>
+    </div>
+
+   
+</body>
+
+</html>
